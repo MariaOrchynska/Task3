@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 
-public class Country implements Server {
+public class Country  {
     String Capital;
     int Population;
     String Name;
@@ -73,11 +73,6 @@ public class Country implements Server {
     }
 
 
-    @Override
-    public void showCountry() {
-
-        System.out.println();
-    }
 
 
 
