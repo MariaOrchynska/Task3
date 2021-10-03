@@ -1,13 +1,18 @@
 package com.company;
 
 import java.io.File;
+import java.util.List;
+import java.util.Scanner;
 
-public class Country {
+public class Country implements Server {
+    String Capital;
+    int Population;
+    String Name;
+    String Continent;
+    Integer IndepYear;
 
-     String Name;
-     String Continent;
 
-    public Country(String name, String continent, String indepYear, String capital, String population) {
+    public Country(String name, String continent, Integer indepYear, String capital, int population) {
         Name = name;
         Continent = continent;
         IndepYear = indepYear;
@@ -15,7 +20,6 @@ public class Country {
         Population = population;
     }
 
-     String IndepYear;
 
     public String getName() {
         return Name;
@@ -33,11 +37,11 @@ public class Country {
         Continent = continent;
     }
 
-    public String getIndepYear() {
+    public Integer getIndepYear() {
         return IndepYear;
     }
 
-    public void setIndepYear(String indepYear) {
+    public void setIndepYear(Integer indepYear) {
         IndepYear = indepYear;
     }
 
@@ -49,15 +53,35 @@ public class Country {
         Capital = capital;
     }
 
-    public String getPopulation() {
+    @Override
+    public String toString() {
+        return "Country{" +
+                "Capital='" + Capital + '\'' +
+                ", Population=" + Population +
+                ", Name='" + Name + '\'' +
+                ", Continent='" + Continent + '\'' +
+                ", IndepYear=" + IndepYear +
+                '}';
+    }
+
+    public int getPopulation() {
         return Population;
     }
 
-    public void setPopulation(String population) {
+    public void setPopulation(int population) {
         Population = population;
     }
 
-     String Capital;
-     String Population;
+
+    @Override
+    public void showCountry() {
+
+        System.out.println();
+    }
+
+
 
 }
+
+
+
