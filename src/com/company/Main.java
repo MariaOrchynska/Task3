@@ -128,8 +128,8 @@ public class Main {
                 System.out.println(("The country has not found " + choice));
         }
 
-Fibonachi fibonachi = new Fibonachi();
-        fibonachi.fibValue();
+Fibonacci fibonacci = new Fibonacci();
+        fibonacci.fibValue();
     }
 
 
